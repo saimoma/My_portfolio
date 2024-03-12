@@ -470,3 +470,14 @@ row:hover img{
         top: 100%;
     }
 }
+
+/* --------------------------json---------------------------- */
+.projects img{
+width: 350px;
+height: 200px;
+
+}
+.projects img:hover{
+    background-color: #ccc;
+    opacity: 60%;
+}
