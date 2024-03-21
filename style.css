@@ -481,3 +481,8 @@ height: 200px;
     background-color: #ccc;
     opacity: 60%;
 }
+.projects button{
+    width: 150px;
+    height: 30px;
+    background-color:rgb(76, 136, 136);
+}

@@ -13,8 +13,8 @@ function displayUsers(data){
     <img src="${users.images}"/>
     <h3>${users.Name}</h3>
     <p>${users.Skill}</p>
-    <button><a href="${users.github}"><i class="fa-solid fa-code"></i></a></button>
-    <button><a href="${users.netlify}"><i class="fa-solid fa-eye"></i></a></button> 
+    <a href="${users.github}"><button>See Detiles</button></a>
+   
     `;
     div.classList.add('projects')
     seeDetails.appendChild(div);
@@ -34,36 +34,31 @@ function displayUsers(data){
 
 
 
+// ----------------------------form strat------------------
+
+const form = document.querySelector('form');
+const yourName = document.querySelector('#name');
+const email = document.querySelector('#email');
+const textarea = document.querySelector('#text');
+const NumBer = document.querySelector('#numberr');
 
 
+form.addEventListener('submit', formhandler);
 
+function formhandler(e){
+    e.preventDefault();
 
+    const formInfo = {
+        Name:yourName.value,
+        Email:email.value,
+        Textarea:textarea.value,
+        Number:NumBer.value
+    }
+    console.log(formInfo);
 
-// // ----------------------------form strat------------------
+    yourName.value = '',
+    email.value = '',
+    textarea.value = ''
+    NumBer.value = ''
 
-// const form = document.querySelector('form');
-// const yourName = document.querySelector('#name');
-// const email = document.querySelector('#email');
-// const textarea = document.querySelector('#text');
-// const NumBer = document.querySelector('#numberr');
-
-
-// form.addEventListener('submit', formhandler);
-
-// function formhandler(e){
-//     e.preventDefault();
-
-//     const formInfo = {
-//         Name:yourName.value,
-//         Email:email.value,
-//         Textarea:textarea.value,
-//         Number:NumBer.value
-//     }
-//     console.log(formInfo);
-
-//     yourName.value = '',
-//     email.value = '',
-//     textarea.value = ''
-//     NumBer.value = ''
-
-// }
+}
